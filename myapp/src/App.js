@@ -1,18 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import Brewery from "./components/brewery";
 import './App.css';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <hr />
-        </header>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className="App">
+      <Brewery />
+    </div>
+  );
 }
 
-export default App;
+export default App
