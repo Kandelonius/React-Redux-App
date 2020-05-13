@@ -1,5 +1,6 @@
 import React from 'react';
-import Brewery from "./components/brewery";
+import Brewery from "./components/Brewery";
+import { connect } from "react-redux";
 import './App.css';
 
 const App = () => {
@@ -10,4 +11,14 @@ const App = () => {
   );
 }
 
-export default App
+const mapStateToProps = state => {
+  console.log('App',state);
+  return {
+    
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  {}
+)(App);
