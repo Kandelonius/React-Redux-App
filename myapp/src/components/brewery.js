@@ -10,6 +10,9 @@ const Brewery = props => {
     <main>
       <h1>Brewery</h1>
       {props.isFetching && <h3>Fetching data...</h3>}
+      {props.brewery && <div>
+        <h3>{props.brewery.name}</h3>
+      </div>}
     </main>
   );
 };

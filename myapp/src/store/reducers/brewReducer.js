@@ -1,4 +1,4 @@
-import { FETCH_BREWERY } from "../actions";
+import { FETCH_BREWERY, FETCH_BREWERY_SUCCESS } from "../actions";
 
 const initialState = {
     isFetching: false,
@@ -14,6 +14,12 @@ const initialState = {
           ...state,
           isFetching: true,
         };
+        case FETCH_BREWERY_SUCCESS:
+          return {
+            ...state,
+            isFetching: false,
+            brewery: action.payload
+          }
       default:
         return state;
     }
