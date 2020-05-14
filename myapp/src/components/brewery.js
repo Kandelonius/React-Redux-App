@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchBrewery } from "../store/actions";
+import './Brewery.css';
 
 const Brewery = props => {
   useEffect(() => {
@@ -10,12 +11,13 @@ const Brewery = props => {
     <main>
       <h1>Brewery</h1>
       {props.isFetching && <h3>Fetching data...</h3>}
-      {props.brewery && <div>
-        <h3>{props.brewery.name}</h3>
+      {props.brewery && <div className='success'>
+         <a href={props.brewery.website_url} target="_blank">{props.brewery.name}</a>
         <h3>{props.brewery.city}</h3>
         <h3>{props.brewery.state}</h3>
+       
       </div>}
-      {props.error && <div>
+      {props.error && <div className='failure'>
         <h1>{props.error}</h1>
       </div>}
     </main>
