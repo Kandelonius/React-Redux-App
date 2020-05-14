@@ -12,6 +12,11 @@ const Brewery = props => {
       {props.isFetching && <h3>Fetching data...</h3>}
       {props.brewery && <div>
         <h3>{props.brewery.name}</h3>
+        <h3>{props.brewery.city}</h3>
+        <h3>{props.brewery.state}</h3>
+      </div>}
+      {props.error && <div>
+        <h1>{props.error}</h1>
       </div>}
     </main>
   );

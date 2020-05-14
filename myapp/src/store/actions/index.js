@@ -15,7 +15,7 @@ export const fetchBrewery = () => {
         })
         .catch(err => {
             console.log(err);
-            dispatch({ type: FETCH_BREWERY_FAILURE, payload: "oops, that's not good..."});
+            dispatch({ type: FETCH_BREWERY_FAILURE, payload: "oops, that's not good..." });
         });
     };
 };
